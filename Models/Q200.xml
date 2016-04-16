@@ -1169,9 +1169,9 @@ livery_update.stop();
 <path>Aircraft/Q400/Models/lights/GreenLight.xml</path>
 <name>Greenlight</name>     
 <offsets>
-<x-m>0.7125</x-m>
-<y-m>14.2759</y-m>
-<z-m>4.2177</z-m>       
+<x-m>-1.4123</x-m>
+<y-m>12.6799</y-m>
+<z-m>3.97</z-m>       
 </offsets>
 </model>
 
@@ -1179,9 +1179,9 @@ livery_update.stop();
 <path>Aircraft/Q400/Models/lights/RedLight.xml</path>
 <name>Redlight</name>     
 <offsets>
-<x-m>0.7125</x-m>
-<y-m>-14.2759</y-m>
-<z-m>4.2177</z-m>       
+<x-m>-1.4123</x-m>
+<y-m>-12.6799</y-m>
+<z-m>3.97</z-m>      
 </offsets>
 </model>
 
@@ -1191,18 +1191,18 @@ livery_update.stop();
 <path>lights/strobe.xml</path>
 <name>strobeRHW</name>     
 <offsets>
-<x-m>0.7125</x-m>
-<y-m>14.2759</y-m>
-<z-m>4.2177</z-m>   
+<x-m>-1.4123</x-m>
+<y-m>12.6799</y-m>
+<z-m>3.97</z-m>   
 </offsets>
 </model>
 <model>
 <path>lights/beacon.xml</path>
 <name>strobeRHW</name>     
 <offsets>
-<x-m>0.7125</x-m>
-<y-m>14.2759</y-m>
-<z-m>4.2177</z-m>   
+<x-m>-1.4123</x-m>
+<y-m>12.6799</y-m>
+<z-m>3.97</z-m>  
 </offsets>
 </model>
 
@@ -1210,18 +1210,18 @@ livery_update.stop();
 <path>lights/strobe.xml</path>
 <name>strobeLHW</name>     
 <offsets>
-<x-m>0.7125</x-m>
-<y-m>-14.2759</y-m>
-<z-m>4.2177</z-m>   
+<x-m>-1.4123</x-m>
+<y-m>-12.6799</y-m>
+<z-m>3.97</z-m>   
 </offsets>
 </model>
 <model>
 <path>lights/beacon.xml</path>
 <name>strobeLHW</name>     
 <offsets>
-<x-m>0.7125</x-m>
-<y-m>-14.2759</y-m>
-<z-m>4.2177</z-m>  
+<x-m>-1.4123</x-m>
+<y-m>-12.6799</y-m>
+<z-m>3.97</z-m>  
 </offsets>
 </model>
 <!--Tail top-->
@@ -1229,18 +1229,18 @@ livery_update.stop();
 <path>lights/strobe.xml</path>
 <name>flashtopwhite</name>     
 <offsets>
-<x-m>16.18368</x-m>
+<x-m>10.0138</x-m>
 <y-m>0.000</y-m>
-<z-m>8.3</z-m>   
+<z-m>8.0188</z-m>     
 </offsets>
 </model>
 <model>
 <path>lights/beacon.xml</path>
 <name>flashtopred</name>     
 <offsets>
-<x-m>16.18368</x-m>
+<x-m>10.0138</x-m>
 <y-m>0.000</y-m>
-<z-m>8.3</z-m>   
+<z-m>8.0188</z-m>   
 </offsets>
 </model>
 <!--Fuselage top-->
@@ -1248,18 +1248,18 @@ livery_update.stop();
 <path>lights/strobe.xml</path>
 <name>fltopwhite</name>     
 <offsets>
-<x-m>-0.44037</x-m>
+<x-m>-1.5276</x-m>
 <y-m>0.000</y-m>
-<z-m>3.9</z-m>   
+<z-m>3.83</z-m>   
 </offsets>
 </model>
 <model>
 <path>lights/beacon.xml</path>
 <name>fltopred</name>     
 <offsets>
-<x-m>-0.44037</x-m>
+<x-m>-1.5276</x-m>
 <y-m>0.000</y-m>
-<z-m>3.9</z-m>      
+<z-m>3.83</z-m>      
 </offsets>
 </model>
 <!--Fuselage bottom-->
@@ -1267,18 +1267,18 @@ livery_update.stop();
 <path>lights/strobe.xml</path>
 <name>flbtmwhite</name>     
 <offsets>
-<x-m>-0.27464</x-m>
+<x-m>-1.9015</x-m>
 <y-m>0.000</y-m>
-<z-m>0.865</z-m>  
+<z-m>0.7367</z-m>  
 </offsets>
 </model>
 <model>
 <path>lights/beacon.xml</path>
 <name>flbtmred</name>     
 <offsets>
-<x-m>-0.27464</x-m>
+<x-m>-1.9015</x-m>
 <y-m>0.000</y-m>
-<z-m>0.865</z-m>      
+<z-m>0.7367</z-m>     
 </offsets>
 </model>
 
