@@ -146,14 +146,14 @@ Prop diam: 2.59 m
 -->
 
     <propeller x="1.3" y="2.65" z="2.0"
-        mass="929" moment="80" radius="2.05"
+        mass="992" moment="80" radius="2.05"
         cruise-speed="414" cruise-rpm="1000"
-        cruise-power="4800" cruise-alt="10000"
+        cruise-power="2200" cruise-alt="10000"
         min-rpm="750" max-rpm="1020"
         fine-stop="0.25" coarse-stop="4.0">
         <actionpt x="5.1061" y="4.1468" z="3.1756"/>
         <turbine-engine
-            eng-power="5071" eng-rpm="1020" alt="10000"
+            eng-power="2380" eng-rpm="1020" alt="10000"
             flat-rating="5071" max-n2="101.5" bsfc="0.468"  spool-time="4"/>
         <control-input axis="/controls/engines/engine[0]/throttle-fwd"
         control="THROTTLE"/>
@@ -168,14 +168,14 @@ Prop diam: 2.59 m
     </propeller>
 
     <propeller x="1.3" y="-2.65" z="2.0"
-        mass="929" moment="80" radius="2.05"
+        mass="992" moment="80" radius="2.05"
         cruise-speed="414" cruise-rpm="1000"
-        cruise-power="4800" cruise-alt="10000"
+        cruise-power="2200" cruise-alt="10000"
         min-rpm="750" max-rpm="1020"
         fine-stop="0.25" coarse-stop="4.0">
         <actionpt x="5.1061" y="-4.1468" z="3.1756"/>
         <turbine-engine
-            eng-power="5071" eng-rpm="1020" alt="10000"
+            eng-power="2380" eng-rpm="1020" alt="10000"
             flat-rating="5071" max-n2="101.5" bsfc="0.468"  spool-time="4"/>
         <control-input axis="/controls/engines/engine[1]/throttle-fwd"
         control="THROTTLE"/>
