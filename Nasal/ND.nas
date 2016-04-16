@@ -1,7 +1,7 @@
 ##
 # storage container for all ND instances
 var placement_left = "screen.on";
-var placement_right = "navdisplayR";
+var placement_right = "screen.onR";
 var nd_display = {};
 
 ##

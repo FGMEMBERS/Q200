@@ -10,6 +10,14 @@
   <factor>0.00245</factor>
 <axis><y>1</y></axis>
 </animation>
+<animation>
+  <type>textranslate</type>
+<object-name>aiR</object-name>
+<property>/orientation/pitch-deg</property>
+  <bias>0.0001</bias>
+  <factor>0.00245</factor>
+<axis><y>1</y></axis>
+</animation>
 
 <animation>
 <type>rotate</type>
@@ -19,6 +27,18 @@
 <center>
 <x-m>-0.0054</x-m>
 <y-m>-0.45158</y-m>
+<z-m>0.02306</z-m>
+  </center>
+<axis><x>-1</x></axis>
+</animation>
+<animation>
+<type>rotate</type>
+<object-name>aiR</object-name>
+<property>/orientation/roll-deg</property>
+  <factor>-1</factor>
+<center>
+<x-m>-0.0054</x-m>
+<y-m>0.45158</y-m>
 <z-m>0.02306</z-m>
   </center>
 <axis><x>-1</x></axis>
@@ -100,10 +120,447 @@
   </center>
 <axis><x>1</x></axis>
 </animation>
+<animation>
+<type>rotate</type>
+<object-name>indicatorR</object-name>
+<property>/velocities/airspeed-kt</property>
+      <interpolation> 
+        <entry>
+          <ind>0</ind>
+          <dep>0</dep>
+        </entry>
+        <entry>
+          <ind>80</ind>
+          <dep>-28.824</dep>
+        </entry>
+		<entry>
+          <ind>100</ind>
+          <dep>-58.512</dep>
+        </entry>
+		<entry>
+          <ind>120</ind>
+          <dep>-89.303</dep>
+        </entry>
+		<entry>
+          <ind>140</ind>
+          <dep>-119.24</dep>
+        </entry>
+		<entry>
+          <ind>160</ind>
+          <dep>-149.901</dep>
+        </entry>
+		<entry>
+          <ind>180</ind>
+          <dep>-171.151</dep>
+        </entry>
+		<entry>
+          <ind>200</ind>
+          <dep>-188.15</dep>
+        </entry>
+		<entry>
+          <ind>300</ind>
+          <dep>-255.697</dep>
+        </entry>
+		<entry>
+          <ind>350</ind>
+          <dep>-313.673</dep>
+        </entry>
+      </interpolation>
+<center>
+<x-m>0.0</x-m>
+<y-m>0.34151</y-m>
+<z-m>0.02045</z-m>
+  </center>
+<axis><x>1</x></axis>
+</animation>
+<!--HI PART, from DR400-Dauphin-->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>hiface</object-name>
+    <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+    <factor>-1</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+<center>
+<x-m>0.0</x-m>
+<y-m>0.34254</y-m>
+<z-m>-0.07488</z-m>
+  </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>HdgBug</object-name>
+    <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+    <factor>-1</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+<center>
+<x-m>0.0</x-m>
+<y-m>0.34254</y-m>
+<z-m>-0.07488</z-m>
+  </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>HdgBug</object-name>
+     <property>/autopilot/settings/heading-bug-deg</property>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+<center>
+<x-m>0.0</x-m>
+<y-m>0.34254</y-m>
+<z-m>-0.07488</z-m>
+  </center>
+  </animation>
+
+<!--     Heading Bug control    -->
+ <animation>
+  <type>knob</type>
+  <object-name>Hdg-Knob</object-name>  
+  <action>
+    <binding>
+      <command>property-adjust</command>
+      <property>autopilot/settings/heading-bug-deg</property>
+      <factor>1</factor>
+      <min>0</min>
+      <max>360</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+  
+  <!-- faster rate of change than the default -->
+  <drag-scale-px>4</drag-scale-px>
+  <shift-repeat type="int">5</shift-repeat>
+  
+  <hovered>
+   <binding>
+     <command>set-tooltip</command>
+     <tooltip-id>heading-bug</tooltip-id>
+     <mapping>heading</mapping>
+     <label>Heading Bug: %3d</label>
+     <property>autopilot/settings/heading-bug-deg</property>
+   </binding>
+  </hovered>
+ </animation>
+
+   <!--             Heading Offset             -->
+   
+   <animation>
+    <type>knob</type>
+    <object-name>OBS-Knob</object-name>  
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/heading-indicator/offset-deg</property>
+        <factor>1</factor>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+  
+    <!-- faster rate of change than the default -->
+    <drag-scale-px>4</drag-scale-px>
+    <shift-repeat type="int">5</shift-repeat>
+    
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>heading-offset</tooltip-id>
+        <label>Heading Offset: %3d</label>
+        <mapping>heading</mapping>
+        <property>instrumentation/heading-indicator/offset-deg</property>
+      </binding>
+    </hovered>
+   </animation>
+
+  <!--     Heading Bug control    -->
+  <animation>
+    <type>pick</type>
+    <object-name>click-bug-L</object-name>
+    <visible>false</visible>
+    <action>
+      <name>small decrease</name>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/heading-bug-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>large decrease</name>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/heading-bug-deg</property>
+        <step>-5</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>scrollwheel increase</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/heading-bug-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>  
+    <action>
+      <name>scrollwheel decrease</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/heading-bug-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>heading-bug</tooltip-id>
+        <mapping>heading</mapping>
+        <label>Heading Bug: %3d</label>
+        <property>autopilot/settings/heading-bug-deg</property>
+      </binding>
+    </hovered>
+  </animation>   
+
+  <animation>
+    <type>pick</type>
+    <object-name>click-bug-R</object-name>
+    <visible>false</visible>
+    <action>
+      <name>small increase</name>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/heading-bug-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>large increase</name>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/heading-bug-deg</property>
+        <step>5</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>scrollwheel increase</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/heading-bug-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>  
+    <action>
+      <name>scrollwheel decrease</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/heading-bug-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>heading-bug</tooltip-id>
+        <mapping>heading</mapping>
+        <label>Heading Bug: %3d</label>
+        <property>autopilot/settings/heading-bug-deg</property>
+      </binding>
+    </hovered>
+  </animation>   
+
+  <!--             Heading Offset             -->
+  <animation>
+    <type>pick</type>
+    <object-name>click-offset-L</object-name>
+    <visible>false</visible>
+    <action>
+      <name>small decrease</name>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>  
+    <action>
+      <name>large decrease</name>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>-5</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>scrollwheel increase</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>  
+    <action>
+      <name>scrollwheel decrease</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>heading-offset</tooltip-id>
+        <label>Heading Offset: %3d</label>
+        <mapping>heading</mapping>
+        <property>instrumentation/heading-indicator/offset-deg</property>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>click-offset-R</object-name>
+    <visible>false</visible>
+    <action>
+      <name>small increase</name>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>  
+    <action>
+      <name>large increase</name>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>5</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>scrollwheel increase</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>  
+    <action>
+      <name>scrollwheel decrease</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>heading-offset</tooltip-id>
+        <label>Heading Offset: %3d</label>
+        <mapping>heading</mapping>
+        <property>instrumentation/heading-indicator/offset-deg</property>
+      </binding>
+    </hovered>
+  </animation>
+  
 <!--Navigation Display-->
 	<animation>
 		<type>select</type>
 		<object-name>screen.off</object-name>
+		<object-name>screen.offR</object-name>
 		<condition>
 			<less-than>
 				<property>systems/electrical/volts</property>
@@ -142,11 +599,27 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
+	<animation>
+		<type>rotate</type>
+		<object-name>needle-wR</object-name>
+		<object-name>needle-bR</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>0.36</factor> 
+        <center>
+        <y-m>0.55996</y-m>
+        <z-m>0.01212</z-m>
+        </center> 
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<!-- altimeter drum counter -->
 	<animation>
 		<type>textranslate</type>
 		<object-name>drum-1</object-name>
+		<object-name>drum-1R</object-name>
 		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.001</factor>
 		<offset>-100</offset>
@@ -163,6 +636,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>drum-2</object-name>
+		<object-name>drum-2R</object-name>
 		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.0001</factor>
 		<offset>-1000</offset>
@@ -179,6 +653,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>drum-3</object-name>
+		<object-name>drum-3R</object-name>
 		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.00001</factor>
 		<offset>-10000</offset>
@@ -194,6 +669,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>negativ-flag</object-name>
+		<object-name>negativ-flagR</object-name>
 		<condition>
 			<less-than>
 				<property>instrumentation/altimeter/indicated-altitude-ft</property>
@@ -204,6 +680,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>below-1000-flag</object-name>
+		<object-name>below-1000-flagR</object-name>
 		<condition>
 			<less-than>
 				<property>instrumentation/altimeter/indicated-altitude-ft</property>
@@ -214,6 +691,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>below-10000-flag</object-name>
+		<object-name>below-10000-flagR</object-name>
 		<condition>
 			<less-than>
 				<property>instrumentation/altimeter/indicated-altitude-ft</property>
@@ -226,6 +704,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>drum-inhg-1</object-name>
+		<object-name>drum-inhg-1R</object-name>
 		<property>instrumentation/altimeter/setting-inhg</property>
 		<factor>10</factor>
 		<offset>-0.01</offset>
@@ -239,6 +718,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>drum-inhg-2</object-name>
+		<object-name>drum-inhg-2R</object-name>
 		<property>instrumentation/altimeter/setting-inhg</property>
 		<factor>1</factor>
 		<offset>-0.1</offset>
@@ -254,6 +734,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>drum-inhg-3</object-name>
+		<object-name>drum-inhg-3R</object-name>
 		<property>instrumentation/altimeter/setting-inhg</property>
 		<factor>0.1</factor>
 		<offset>-1</offset>
@@ -269,6 +750,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>drum-inhg-4</object-name>
+		<object-name>drum-inhg-4R</object-name>
 		<property>instrumentation/altimeter/setting-inhg</property>
 		<factor>0.01</factor>
 		<offset>-10</offset>
@@ -287,6 +769,7 @@
 		<type>pick</type>
 		<visible>true</visible>
 		<object-name>ingh-knob-left</object-name>
+		<object-name>ingh-knob-leftR</object-name>
 		<action>
 			<button>0</button>
 			<repeatable>true</repeatable>
@@ -307,6 +790,7 @@
 		<type>pick</type>
 		<visible>true</visible>
 		<object-name>ingh-knob-left</object-name>
+		<object-name>ingh-knob-leftR</object-name>
 		<action>
 			<button>1</button>
 			<repeatable>true</repeatable>
@@ -327,6 +811,7 @@
 		<type>pick</type>
 		<visible>true</visible>
 		<object-name>ingh-knob-right</object-name>
+		<object-name>ingh-knob-rightR</object-name>
 		<action>
 			<button>0</button>
 			<repeatable>true</repeatable>
@@ -347,6 +832,7 @@
 		<type>pick</type>
 		<visible>true</visible>
 		<object-name>ingh-knob-right</object-name>
+		<object-name>ingh-knob-rightR</object-name>
 		<action>
 			<button>1</button>
 			<repeatable>true</repeatable>
