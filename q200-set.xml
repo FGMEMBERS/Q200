@@ -64,7 +64,7 @@ new version with up-to-date systems, a complete new ex- and interior model 2016 
     <menubar>
         <default>
             <menu n="10">
-                <label>Bombardier Q400</label>
+                <label>Bombardier Q200</label>
                 <enabled type="bool">true</enabled>
                 <item>
                     <label>Autostart</label>

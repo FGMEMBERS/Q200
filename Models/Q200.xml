@@ -95,7 +95,9 @@ livery_update.stop();
       <object-name>doorC</object-name>
       <object-name>gearF</object-name>
       <object-name>gearFR</object-name>
+      <object-name>gearFR2</object-name>
       <object-name>gearFL</object-name>
+      <object-name>gearFL2</object-name>
       <object-name>gearL1</object-name>
       <object-name>gearL2</object-name>
       <object-name>GeardoorLHL</object-name>
@@ -896,6 +898,43 @@ livery_update.stop();
   <z>0</z>
  </axis>
 </animation>
+<animation>
+ <type>rotate</type>
+ <object-name>gearFR2</object-name>
+ <property>/gear/gear[0]/position-norm</property>
+      <interpolation> 
+		<entry>
+          <ind>1</ind>
+          <dep>0</dep>
+        </entry>
+        <entry>
+          <ind>0.9</ind>
+          <dep>-120</dep>
+        </entry>
+        <entry>
+          <ind>0.05</ind>
+          <dep>-120</dep>
+        </entry>
+		<entry>
+          <ind>0</ind>
+          <dep>0</dep>
+        </entry>
+      </interpolation>
+ <center>
+  <x-m>-9.2067</x-m>
+  <y-m>-0.3195</y-m>
+  <z-m>0.7764</z-m>
+ </center>
+
+        <axis>
+            <x1-m>-9.9695</x1-m>
+            <y1-m>-0.3013</y1-m>
+            <z1-m>0.8307</z1-m>
+            <x2-m>-8.5457</x2-m>
+            <y2-m>-0.3354</y2-m>
+            <z2-m>0.744</z2-m>
+        </axis>
+</animation>
 
 <animation>
  <type>rotate</type>
@@ -927,6 +966,42 @@ livery_update.stop();
             <z1-m>0.8307</z1-m>
             <x2-m>-8.5457</x2-m>
             <y2-m>-0.3354</y2-m>
+            <z2-m>0.744</z2-m>
+        </axis>
+</animation>
+<animation>
+ <type>rotate</type>
+ <object-name>gearFL2</object-name>
+ <property>/gear/gear[0]/position-norm</property>
+      <interpolation> 
+		<entry>
+          <ind>1</ind>
+          <dep>0</dep>
+        </entry>
+        <entry>
+          <ind>0.9</ind>
+          <dep>120</dep>
+        </entry>
+        <entry>
+          <ind>0.05</ind>
+          <dep>120</dep>
+        </entry>
+		<entry>
+          <ind>0</ind>
+          <dep>0</dep>
+        </entry>
+      </interpolation>
+ <center>
+  <x-m>-9.2067</x-m>
+  <y-m>0.3195</y-m>
+  <z-m>0.7764</z-m>
+ </center>
+<axis>
+            <x1-m>-9.9695</x1-m>
+            <y1-m>0.3013</y1-m>
+            <z1-m>0.8307</z1-m>
+            <x2-m>-8.5457</x2-m>
+            <y2-m>0.3354</y2-m>
             <z2-m>0.744</z2-m>
         </axis>
 </animation>

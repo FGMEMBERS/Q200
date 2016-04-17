@@ -90,62 +90,6 @@
             <z2-m>1.89348</z2-m>
         </axis>
     </animation>
-<!--HUD-->
-<animation>
-  <type>pick</type>
-	<object-name>hud.glass</object-name>
-  <action>
-   <button>0</button>
-    <binding>
-     <command>property-toggle</command>
-     <property>/controls/switches/hud</property>
-    </binding>
-   </action>
-  </animation>
-
-    <animation>
-        <type>slider</type>
-        <object-name>hud</object-name>
-        <drag-direction>vertical</drag-direction>
-        <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>controls/switches/hud-flip</property>
-            <factor>-0.05</factor>
-            <min>0</min>
-            <max>1</max>
-            <wrap>0</wrap>
-          </binding>
-        </action>
-        <hovered>
-          <binding>
-            <command>set-tooltip</command>
-            <label>Hud Flip: %3d%%</label>
-            <measure-text>Hud Flip: 100%</measure-text>
-            <tooltip-id>hud-flip</tooltip-id>
-            <mapping>percent</mapping>
-            <property>controls/switches/hud-flip</property>
-          </binding>
-        </hovered>
-    </animation>
-
-<animation>
-	<type>rotate</type>
-	<object-name>hud</object-name>
-	<object-name>hud.glass</object-name>
-	<property>/controls/switches/hud-flip</property>
-	<factor>-65</factor>
-	<center>
-		<x-m>-11.96066</x-m>
-		<y-m>0</y-m>
-		<z-m>2.85956</z-m>
-	</center>
-	<axis>
-		<x>0</x>
-		<y>1</y>
-		<z>0</z>
-	</axis>
-</animation>
   <!--Animate Throttle Panel-->
 <!--Throttles-->
 
