@@ -18,6 +18,44 @@
   </animation>
 
   </model>
+<!--Sun shader-->
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>sunshader</object-name>
+        <object-name>sunshader2</object-name>
+</effect>
+<!--move-->
+    <animation>
+        <type>rotate</type>
+        <object-name>sunshader</object-name>
+        <object-name>sunshader2</object-name>
+        <property>cockpit/sunshader/deg</property>
+        <factor>1</factor>
+<center>
+      <x-m>-7.44151</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m></center>
+		<axis>
+           <z>1</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>slider</type>
+        <object-name>sunshader</object-name>
+        <object-name>sunshader2</object-name>
+        <object-name>sunshaderrail</object-name>
+        <drag-direction>horizontal</drag-direction>
+        <action>
+          <binding>
+            <command>property-adjust</command>
+        <property>cockpit/sunshader/deg</property>
+            <factor>-1.2</factor>
+            <min>0</min>
+            <max>153</max>
+            <wrap>0</wrap>
+          </binding>
+        </action>
+    </animation>
           <!--Panel illumination-->
         
 <animation>
@@ -68,12 +106,12 @@
         <property>gear/gear/caster-angle-deg</property>
         <factor>-0.15</factor>
 		<axis>
-            <x1-m>-11.67347</x1-m>
-            <y1-m>-0.87988</y1-m>
-            <z1-m>1.85555</z1-m>
-            <x2-m>-11.61158</x2-m>
-            <y2-m>-0.87988</y2-m>
-            <z2-m>1.89348</z2-m>
+            <x1-m>-8.17822</x1-m>
+            <y1-m>-0.87958</y1-m>
+            <z1-m>1.85776</z1-m>
+            <x2-m>-8.116</x2-m>
+            <y2-m>-0.87958</y2-m>
+            <z2-m>1.89735</z2-m>
         </axis>
     </animation>
     <animation>
@@ -82,12 +120,12 @@
         <property>gear/gear/caster-angle-deg</property>
         <factor>-0.15</factor>
 		<axis>
-            <x1-m>-11.67347</x1-m>
-            <y1-m>0.87988</y1-m>
-            <z1-m>1.85555</z1-m>
-            <x2-m>-11.61158</x2-m>
-            <y2-m>0.87988</y2-m>
-            <z2-m>1.89348</z2-m>
+            <x1-m>-8.17822</x1-m>
+            <y1-m>0.87958</y1-m>
+            <z1-m>1.85776</z1-m>
+            <x2-m>-8.116</x2-m>
+            <y2-m>0.87958</y2-m>
+            <z2-m>1.89735</z2-m>
         </axis>
     </animation>
   <!--Animate Throttle Panel-->

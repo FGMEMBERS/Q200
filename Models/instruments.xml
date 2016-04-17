@@ -573,17 +573,6 @@
     
 
 	<animation>
-		<type>select</type>
-		<object-name>altimeter</object-name>
-		<condition>
-			<equals>
-				<property>sim/current-view/name</property>
-				<value>Cockpit View</value>
-			</equals>
-		</condition>
-	</animation>
-
-	<animation>
 		<type>rotate</type>
 		<object-name>needle-w</object-name>
 		<object-name>needle-b</object-name>
@@ -848,7 +837,7 @@
 		</action>
 	</animation>
 
-	<!-- lighting -->
+	<!-- lighting --><!--
 	<animation>
 		<object-name>mount</object-name>
 		<type>material</type>
@@ -869,7 +858,7 @@
 			<green>0.24</green>
 			<blue>0.10</blue>
 		</emission>
-	</animation>
+	</animation>-->
 
 	<animation>
 		<object-name>face</object-name>
@@ -881,7 +870,7 @@
 			<blue>0.10</blue>
 		</emission>
 	</animation>
-
+<!--
 	<animation>
 		<object-name>drums</object-name>
 		<type>material</type>
@@ -892,7 +881,7 @@
 			<blue>0.10</blue>
 		</emission>
 	</animation>
-
+-->
 	<animation>
 		<object-name>needle-w</object-name>
 		<type>material</type>

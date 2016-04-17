@@ -36,11 +36,11 @@
     <property>sim/model/door-positions/fd/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
-      <entry><ind> 1 </ind><dep> 80 </dep></entry>
+      <entry><ind> 1 </ind><dep> -80 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -10.76787 </x-m>
-      <y-m>  0.31383 </y-m>
+      <x-m>-7.28184</x-m>
+      <y-m>-0.31388 </y-m>
     </center>
     <axis>
       <x> 0 </x>
